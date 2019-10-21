@@ -34,6 +34,10 @@ h1 {
   line-height: 5.5rem;
 }
 
+@media (max-width: 575px){
+  h1 { font-size: 5rem;}
+}
+
 h2 {
   font-size: 3.5rem;
 }
@@ -73,6 +77,18 @@ p.lead {
 
 .social-icons a:hover {
   background-color: #BD5D38;
+}
+
+.social-icons a.linkedin:hover {
+  background-color: #0071c5;
+}
+
+.social-icons a.github:hover {
+  background-color: #6e5494;
+}
+
+.social-icons a.twitter:hover {
+  background-color: #1da1f2;
 }
 
 .dev-icons {
@@ -164,13 +180,13 @@ section.resume-section .resume-item .resume-date {
 }
 
 .text-primary {
-  color: #BD5D38 !important;
+  color: #0071c5 !important;
 }
 
 a {
-  color: #BD5D38;
+  color: #0071c5;
 }
 
-a:hover, a:focus, a:active {
-  color: #824027;
-}
+/* a:hover, a:focus, a:active {
+  color:#824027;
+} */
