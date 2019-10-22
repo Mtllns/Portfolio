@@ -26,6 +26,108 @@
     i.fa-angular:hover { color: #e23237 !important;}
     i.fa-sass:hover {color: #cf649a !important;}
     i.fa-wordpress:hover {color: #464342 !important;}
+
+    /* Portfolio */
+    .portfolio {
+      margin-bottom: -30px;
+    }
+
+    .portfolio .portfolio-item {
+      cursor: pointer;
+      position: relative;
+      display: block;
+      max-width: 25rem;
+      margin-bottom: 30px;
+      border-radius: 0.5rem;
+      overflow: hidden;
+    }
+
+    .portfolio .portfolio-item .portfolio-item-caption {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: all 0.2s ease-in-out;
+      opacity: 0;
+      background-color: rgba(0, 113, 197, 0.7);
+    }
+
+    .portfolio .portfolio-item .portfolio-item-caption:hover {
+      opacity: 1;
+    }
+
+    .portfolio .portfolio-item .portfolio-item-caption .portfolio-item-caption-content {
+      font-size: 1.5rem;
+    }
+
+    .portfolio-modal .portfolio-modal-title {
+      font-size: 2.25rem;
+      line-height: 2rem;
+    }
+
+    @media (min-width: 992px) {
+      .portfolio-modal .portfolio-modal-title {
+        font-size: 3rem;
+        line-height: 2.5rem;
+      }
+    }
+
+    .portfolio-modal .close {
+      position: absolute;
+      z-index: 1;
+      right: 1.5rem;
+      top: 1rem;
+      font-size: 3rem;
+      line-height: 3rem;
+      color: red;
+      opacity: 1;
+    }
+
+    @media (max-width: 575px){
+      .portfolio-modal .close {
+        right: 1rem;
+        top: 0rem;
+        font-size: 2rem;
+      }
+    }
+
+    .divider-custom {
+   margin: 1.25rem 0 1.5rem;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+  }
+
+  divider-custom .divider-custom-line {
+   width: 100%;
+   max-width: 7rem;
+   height: 0.25rem;
+   background-color: #2c3e50;
+   border-radius: 1rem;
+   border-color: #2c3e50 !important;
+  }
+
+  divider-custom .divider-custom-line:first-child {
+   margin-right: 1rem;
+  }
+
+  divider-custom .divider-custom-line:last-child {
+   margin-left: 1rem;
+  }
+
+  divider-custom .divider-custom-icon {
+   color: #2c3e50 !important;
+   font-size: 2rem;
+  }
+
+  divider-custom.divider-light .divider-custom-line {
+   background-color: #fff;
+  }
+
+  divider-custom.divider-light .divider-custom-icon {
+   color: #fff !important;
+  }
+
   </style>
 
 </head>
@@ -74,7 +176,7 @@
           <span class="text-secondary">Matallanes</span>
         </h1>
         <div class="subheading mb-5">3542 Berry Street · Cheyenne Wells, CO 80810 · (317) 585-8468 ·
-          <a href="mailto:name@email.com">miquel@mtlls.com</a>
+          <a href="mailto:hola@miquelmatallanes.com">hola@mtlls.com</a>
         </div>
         <p class="lead mb-5">I am experienced in leveraging agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.</p>
         <div class="social-icons">
@@ -87,9 +189,6 @@
           <a class="twitter" href="https://twitter.com/miquelmtllns" target="new" rel="external">
             <i class="fab fa-twitter"></i>
           </a>
-          <!-- <a href="#">
-            <i class="fab fa-facebook-f"></i>
-          </a> -->
         </div>
       </div>
     </section>
@@ -111,6 +210,46 @@
           </div>
         </div>
 
+        <!-- Portfolio Grid Items 1 -->
+
+        <div class="row portfolio mb-5">
+
+          <!-- Portfolio Item 1 -->
+          <div class="col-12 col-md-4">
+            <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1">
+              <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                <div class="portfolio-item-caption-content text-center text-white">
+                  <i class="fas fa-plus fa-2x"></i>
+                </div>
+              </div>
+              <img class="img-fluid border-bottom border-top" src="img/portfolio/Bliss_Games.webp" alt="BlissGames.com">
+            </div>
+          </div>
+
+          <!-- Portfolio Item 2 -->
+          <div class="col-12 col-md-4">
+            <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal2">
+              <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                <div class="portfolio-item-caption-content text-center text-white">
+                  <i class="fas fa-plus fa-2x"></i>
+                </div>
+              </div>
+                <img class="img-fluid border-bottom border-top" src="img/portfolio/ArtduTempsGalerie.webp" alt="Artdutemps-drome.com">
+            </div>
+          </div>
+          <!-- Portfolio Item 3 -->
+          <div class="col-12 col-md-4">
+            <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal3">
+            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+              <div class="portfolio-item-caption-content text-center text-white">
+                <i class="fas fa-plus fa-2x"></i>
+              </div>
+            </div>
+            <img class="img-fluid border-bottom border-top" src="img/portfolio/JuanitaAcevedoFormadora.webp" alt="Juanita Acevedo">
+          </div>
+          </div>
+        </div>
+
         <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
           <div class="resume-content">
             <h3 class="mb-0">Web Developer</h3>
@@ -122,60 +261,45 @@
           </div>
         </div>
 
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="resume-content">
-            <h3 class="mb-0">Junior Web Designer</h3>
-            <div class="subheading mb-3">Shout! Media Productions</div>
-            <p>Podcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to maximise the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration.</p>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">July 2010 - December 2011</span>
-          </div>
-        </div>
+        <!-- Portfolio Grid Items 2 -->
 
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between">
-          <div class="resume-content">
-            <h3 class="mb-0">Web Design Intern</h3>
-            <div class="subheading mb-3">Shout! Media Productions</div>
-            <p>Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.</p>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">September 2008 - June 2010</span>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12 col-md-4">
-            <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1">
-            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-              <div class="portfolio-item-caption-content text-center text-white">
-                <i class="fas fa-plus fa-3x"></i>
-              </div>
-            </div>
-            <img class="img-fluid border-bottom border-top" src="img/portfolio/Bliss_Games.jpg" alt="">
-          </div>
-          </div>
-          <div class="col-12 col-md-4">
-            <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal2">
-            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-              <div class="portfolio-item-caption-content text-center text-white">
-                <i class="fas fa-plus fa-3x"></i>
-              </div>
-            </div>
-            <img class="img-fluid border-bottom border-top" src="img/portfolio/ArtduTempsGalerie.jpg" alt="">
-          </div>
-          </div>
-          <div class="col-12 col-md-4">
-            <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal3">
-            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-              <div class="portfolio-item-caption-content text-center text-white">
-                <i class="fas fa-plus fa-3x"></i>
-              </div>
-            </div>
-            <img class="img-fluid border-bottom border-top" src="img/portfolio/JuanitaAcevedoFormadora.jpg" alt="">
-          </div>
-          </div>
-        </div>
+        <div class="row portfolio mb-5">
 
+          <!-- Portfolio Item 4 -->
+          <div class="col-12 col-md-4">
+            <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal4">
+              <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                <div class="portfolio-item-caption-content text-center text-white">
+                  <i class="fas fa-plus fa-2x"></i>
+                </div>
+              </div>
+              <img class="img-fluid border-bottom border-top" src="img/portfolio/CieloTierra.webp" alt="Cielo y Tierra">
+            </div>
+          </div>
+
+          <!-- Portfolio Item 5 -->
+          <div class="col-12 col-md-4">
+            <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal5">
+              <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                <div class="portfolio-item-caption-content text-center text-white">
+                  <i class="fas fa-plus fa-2x"></i>
+                </div>
+              </div>
+                <img class="img-fluid border-bottom border-top" src="img/portfolio/IreneGaribaldi.webp" alt="Irene Garibaldi">
+            </div>
+          </div>
+          <!-- Portfolio Item 6 -->
+          <div class="col-12 col-md-4">
+            <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal6">
+            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+              <div class="portfolio-item-caption-content text-center text-white">
+                <i class="fas fa-plus fa-2x"></i>
+              </div>
+            </div>
+            <img class="img-fluid border-bottom border-top" src="img/portfolio/ExcellenceEditorial.webp" alt="Excellence Editorial">
+          </div>
+          </div>
+        </div>
       </div>
 
     </section>
@@ -280,26 +404,6 @@
           <li>
             <i class="fa-li fa fa-trophy text-warning"></i>
             Mobile Web Specialist - Google Certification</li>
-          <!-- <li>
-            <i class="fa-li fa fa-trophy text-warning"></i>
-            1<sup>st</sup>
-            Place - University of Colorado Boulder - Emerging Tech Competition 2009</li>
-          <li>
-            <i class="fa-li fa fa-trophy text-warning"></i>
-            1<sup>st</sup>
-            Place - University of Colorado Boulder - Adobe Creative Jam 2008 (UI Design Category)</li>
-          <li>
-            <i class="fa-li fa fa-trophy text-warning"></i>
-            2<sup>nd</sup>
-            Place - University of Colorado Boulder - Emerging Tech Competition 2008</li>
-          <li>
-            <i class="fa-li fa fa-trophy text-warning"></i>
-            1<sup>st</sup>
-            Place - James Buchanan High School - Hackathon 2006</li>
-          <li>
-            <i class="fa-li fa fa-trophy text-warning"></i>
-            3<sup>rd</sup>
-            Place - James Buchanan High School - Hackathon 2005</li> -->
         </ul>
       </div>
     </section>
@@ -327,15 +431,103 @@
                 <div class="divider-custom">
                   <div class="divider-custom-line"></div>
                   <div class="divider-custom-icon">
-                    <i class="fas fa-gamepad"></i>
+                    <!-- <i class="fas fa-gamepad"></i> -->
                   </div>
                   <div class="divider-custom-line"></div>
                 </div>
                 <!-- Portfolio Modal - Image -->
-                <img class="img-fluid rounded mb-5" src="img/portfolio/Bliss_Games.jpg" alt="">
+                <img class="img-fluid rounded mb-5 d-none d-md-block" src="img/portfolio/blissgames_full.webp" alt="BlissGames">
+                <img class="img-fluid rounded mb-5 d-xs-block " src="img/portfolio/blissgames_full_movil.webp" alt="BlissGames">
                 <!-- Portfolio Modal - Text -->
                 <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                <a class="btn btn-info" href="https://blissgames.com" target="new">
+                <a class="btn btn-primary" href="https://blissgames.com" target="new">
+                  <i class="fas fa-external-link-alt fa-fw"></i>
+                   Ver más
+                </a>
+                <button class="btn btn-danger" href="#" data-dismiss="modal">
+                  <i class="fas fa-times fa-fw"></i>
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Portfolio Modal 2 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-labelledby="portfolioModal2Label" aria-hidden="true">
+      <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">
+              <i class="fas fa-times"></i>
+            </span>
+          </button>
+          <div class="modal-body text-center">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <!-- Portfolio Modal - Title -->
+                  <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Art du Temps Galerie</h2>
+                  <!-- Icon Divider -->
+                  <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon">
+                      <!-- <i class="fas fa-gamepad"></i> -->
+                    </div>
+                    <div class="divider-custom-line"></div>
+                  </div>
+                  <!-- Portfolio Modal - Image -->
+                  <img class="img-fluid rounded mb-5 d-none d-md-block" src="img/portfolio/artdutempsdrome_full.webp" alt="Art du Temps Galerie">
+                  <img class="img-fluid rounded mb-5 d-xs-block" src="img/portfolio/artdutempsdrome_full_movil.webp" alt="Art du Temps Galerie">
+                  <!-- Portfolio Modal - Text -->
+                  <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                  <a class="btn btn-info" href="https://www.artdutemps-drome.com" target="new">
+                    <i class="fas fa-external-link-alt fa-fw"></i>
+                     Ver más
+                  </a>
+                  <button class="btn btn-primary" href="#" data-dismiss="modal">
+                    <i class="fas fa-times fa-fw"></i>
+                    Close Window
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <!-- Portfolio Modal 3 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-labelledby="portfolioModal3Label" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+        <div class="modal-body text-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <!-- Portfolio Modal - Title -->
+                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Juanita Acevedo</h2>
+                <!-- Icon Divider -->
+                <div class="divider-custom">
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-icon">
+                    <!-- <i class="fas fa-gamepad"></i> -->
+                  </div>
+                  <div class="divider-custom-line"></div>
+                </div>
+                <!-- Portfolio Modal - Image -->
+                <img class="img-fluid rounded mb-5" src="img/portfolio/juanitaacevedo_full.webp" alt="">
+                <!-- Portfolio Modal - Text -->
+                <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                <a class="btn btn-info" href="http://juanitaacevedo.com" target="new">
                   <i class="fas fa-external-link-alt fa-fw"></i>
                    Ver más
                 </a>
@@ -351,6 +543,49 @@
     </div>
   </div>
 
+    <!-- Portfolio Modal 4 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-labelledby="portfolioModal4Label" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+        <div class="modal-body text-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <!-- Portfolio Modal - Title -->
+                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Cielo y Tierra</h2>
+                <!-- Icon Divider -->
+                <div class="divider-custom">
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-icon">
+                    <!-- <i class="fas fa-gamepad"></i> -->
+                  </div>
+                  <div class="divider-custom-line"></div>
+                </div>
+                <!-- Portfolio Modal - Image -->
+                <img class="img-fluid rounded mb-5" src="img/portfolio/cyt_full.webp" alt="">
+                <!-- Portfolio Modal - Text -->
+                <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                <a class="btn btn-info" href="https://www.cytescuelamtc.com" target="new">
+                  <i class="fas fa-external-link-alt fa-fw"></i>
+                   Ver más
+                </a>
+                <button class="btn btn-primary" href="#" data-dismiss="modal">
+                  <i class="fas fa-times fa-fw"></i>
+                  Close Window
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
