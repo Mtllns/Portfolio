@@ -162,7 +162,15 @@
           <a class="nav-link js-scroll-trigger" href="#intereses">Intereses</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#awards">Awards</a>
+          <a class="nav-link js-scroll-trigger" href="#awards">Certificaciones</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#contact">Contacto</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link" data-toggle="modal" data-target="#login-Modal">
+            Login
+          </a>
         </li>
       </ul>
     </div>
@@ -175,10 +183,10 @@
         <h1 class="mb-0">Miquel
           <span class="text-secondary">Matallanes</span>
         </h1>
-        <div class="subheading mb-5">3542 Berry Street · Cheyenne Wells, CO 80810 · (317) 585-8468 ·
+        <div class="subheading mb-5">Barcelona · Caldes de Montbui, CP 080140 · 666-585-846 ·
           <a href="mailto:hola@miquelmatallanes.com">hola@mtlls.com</a>
         </div>
-        <p class="lead mb-5">I am experienced in leveraging agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.</p>
+        <p class="lead mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum nulla quae cum ratione ad expedita laborum, vel dignissimos adipisci consequuntur natus, itaque eveniet rem. Autem laudantium iure ullam est omnis!</p>
         <div class="social-icons">
           <a class="linkedin" href="https://www.linkedin.es/in/miquelmatallanes/" target="new" rel="external">
             <i class="fab fa-linkedin-in"></i>
@@ -203,7 +211,7 @@
           <div class="resume-content">
             <h3 class="mb-0">Senior Web Developer</h3>
             <div class="subheading mb-3">Intelitec Solutions</div>
-            <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id quam, est doloremque aspernatur impedit ipsam? Deleniti tenetur porro aut id numquam expedita, eum, nisi fugiat labore ex deserunt illo nihil!</p>
           </div>
           <div class="resume-date text-md-right">
             <span class="text-primary">March 2013 - Present</span>
@@ -254,7 +262,7 @@
           <div class="resume-content">
             <h3 class="mb-0">Web Developer</h3>
             <div class="subheading mb-3">Intelitec Solutions</div>
-            <p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus exercitationem quo quisquam velit quod fuga tenetur, quibusdam ipsam minima sint nam praesentium maiores in, repellat fugit soluta mollitia quos illo?</p>
           </div>
           <div class="resume-date text-md-right">
             <span class="text-primary">December 2011 - March 2013</span>
@@ -298,6 +306,84 @@
             </div>
             <img class="img-fluid border-bottom border-top" src="img/portfolio/ExcellenceEditorial.webp" alt="Excellence Editorial">
           </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Login Modal -->
+      <div class="modal fade" id="login-Modal" tabindex="-1" role="dialog" aria-labelledby="login-ModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title h2" id="loginModalLabel">Inicia sesión</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form id="login-form">
+                <div class="form-group">
+                  <label for="login-email">Usuario</label>
+                  <input type="email" name="login-email"  class="form-control" placeholder="Tu email">
+                </div>
+                <div class="form-group">
+                  <label for="login-password">Contraseña</label>
+                  <input type="password" class="form-control" name="login-password" placeholder="Contraseña">
+                </div>
+                <div class="checkbox">
+                  <label><input type="checkbox" name="remember"> Recordar mis datos</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Entrar</button>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-success float-left" data-toggle="modal" data-target="#registroModal" data-dismiss="modal">Regístrate</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Registro Modal -->
+      <div class="modal fade" id="registroModal" tabindex="-1" role="dialog" aria-labelledby="registroModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title h2" id="registroModalLabel">Crea tu cuenta</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <!-- FORM -->
+              <form id="register-form" method="GET" action="index.html#intereses" onsubmit="return Validate()" name="vform">
+                <div class="form-group">
+                  <label for="username">Usuario</label>
+                  <input type="text" class="form-control" name="username" aria-describedby="nameHelp" placeholder="Usuario">
+                  <div id="name_error" class="val_error"></div>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="text" class="form-control" name="email" aria-describedby="emailHelp" placeholder="Tu email">
+                  <div id="email_error" class="val_error"></div>
+                </div>
+                <div class="form-group">
+                  <label for="password">Contraseña</label>
+                  <input type="password" class="form-control" name="password" id="password" placeholder="Contraseña">
+                </div>
+                <div class="form-group">
+                  <label for="password_confirmation">Repite tu Contraseña</label>
+                  <input type="password" class="form-control" name="password_confirmation" placeholder="Repite tu Contraseña">
+                  <div id="password_error" class="val_error"></div>
+                </div>
+                <!-- <div class="checkbox"><label><input type="checkbox" name="remember"> Recordar mis datos</label></div> -->
+                <button type="submit" class="btn btn-primary">Registrarse</button>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+              <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+            </div>
           </div>
         </div>
       </div>
@@ -396,15 +482,63 @@
 
     <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="awards">
       <div class="w-100">
-        <h2 class="mb-5">Awards &amp; Certifications</h2>
+        <h2 class="mb-5">Certificaciones</h2>
         <ul class="fa-ul mb-0">
           <li>
             <i class="fa-li fa fa-trophy text-warning"></i>
-            Google Analytics Certified Developer</li>
+            ACTIC nivel II</li>
           <li>
             <i class="fa-li fa fa-trophy text-warning"></i>
             Mobile Web Specialist - Google Certification</li>
         </ul>
+      </div>
+    </section>
+
+    <hr class="m-0">
+    <!-- Contact Section Form -->
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="contact">
+      <div class="w-100">
+        <h2 class="mb-5">Contacto</h2>
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
+            <form name="sentMessage" id="contactForm"  class="needs-validation" novalidate>
+              <div class="control-group">
+                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                  <label>Nombre</label>
+                  <input class="form-control" id="name" type="text" placeholder="Nombre" required data-validation-required-message="Por favor, introduzca su nombre.">
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+              <div class="control-group">
+                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                  <label>Email</label>
+                  <input class="form-control" id="email" type="email" placeholder="Email" required data-validation-required-message="Por favor, introduzca su dirección de email.">
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+              <div class="control-group">
+                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                  <label>Teléfono</label>
+                  <input class="form-control" id="phone" type="tel" placeholder="Teléfono" required data-validation-required-message="Por favor, introduzca su número de teléfono.">
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+              <div class="control-group">
+                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                  <label>Mensaje</label>
+                  <textarea class="form-control" id="message" rows="3" placeholder="Mensaje" required data-validation-required-message="Por favor, introduzca un mensaje."></textarea>
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+              <br>
+              <div id="success"></div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-x1" id="sendMessageButton">Enviar</button>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -436,8 +570,8 @@
                   <div class="divider-custom-line"></div>
                 </div>
                 <!-- Portfolio Modal - Image -->
-                <img class="img-fluid rounded mb-5 d-none d-md-block" src="img/portfolio/blissgames_full.webp" alt="BlissGames">
-                <img class="img-fluid rounded mb-5 d-xs-block " src="img/portfolio/blissgames_full_movil.webp" alt="BlissGames">
+                <img class="img-fluid rounded mb-5 d-none d-sm-block" src="img/portfolio/blissgames_full.webp" alt="BlissGames">
+                <img class="img-fluid rounded mb-5 d-block d-sm-none" src="img/portfolio/blissgames_full_movil.webp" alt="BlissGames">
                 <!-- Portfolio Modal - Text -->
                 <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
                 <a class="btn btn-primary" href="https://blissgames.com" target="new">
@@ -446,7 +580,7 @@
                 </a>
                 <button class="btn btn-danger" href="#" data-dismiss="modal">
                   <i class="fas fa-times fa-fw"></i>
-                  Close
+                  Cerrar
                 </button>
               </div>
             </div>
@@ -480,17 +614,17 @@
                     <div class="divider-custom-line"></div>
                   </div>
                   <!-- Portfolio Modal - Image -->
-                  <img class="img-fluid rounded mb-5 d-none d-md-block" src="img/portfolio/artdutempsdrome_full.webp" alt="Art du Temps Galerie">
-                  <img class="img-fluid rounded mb-5 d-xs-block" src="img/portfolio/artdutempsdrome_full_movil.webp" alt="Art du Temps Galerie">
+                  <img class="img-fluid rounded mb-5 d-none d-sm-block" src="img/portfolio/artdutempsdrome_full.webp" alt="Art du Temps Galerie">
+                  <img class="img-fluid rounded mb-5 d-block d-sm-none" src="img/portfolio/artdutempsdrome_full_movil.webp" alt="Art du Temps Galerie">
                   <!-- Portfolio Modal - Text -->
                   <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                  <a class="btn btn-info" href="https://www.artdutemps-drome.com" target="new">
+                  <a class="btn btn-primary" href="https://www.artdutemps-drome.com" target="new">
                     <i class="fas fa-external-link-alt fa-fw"></i>
                      Ver más
                   </a>
-                  <button class="btn btn-primary" href="#" data-dismiss="modal">
+                  <button class="btn btn-danger" href="#" data-dismiss="modal">
                     <i class="fas fa-times fa-fw"></i>
-                    Close Window
+                    Cerrar
                   </button>
                 </div>
               </div>
@@ -524,16 +658,17 @@
                   <div class="divider-custom-line"></div>
                 </div>
                 <!-- Portfolio Modal - Image -->
-                <img class="img-fluid rounded mb-5" src="img/portfolio/juanitaacevedo_full.webp" alt="">
+                <img class="img-fluid rounded mb-5 d-none d-sm-block" src="img/portfolio/juanitaacevedo_full.webp" alt="Juanita Acevedo">
+                <img class="img-fluid rounded mb-5 d-block d-sm-none" src="img/portfolio/juanitaacevedo_full_movil.webp" alt="Juanita Acevedo">
                 <!-- Portfolio Modal - Text -->
                 <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                <a class="btn btn-info" href="http://juanitaacevedo.com" target="new">
+                <a class="btn btn-primary" href="http://juanitaacevedo.com" target="new">
                   <i class="fas fa-external-link-alt fa-fw"></i>
                    Ver más
                 </a>
-                <button class="btn btn-primary" href="#" data-dismiss="modal">
+                <button class="btn btn-danger" href="#" data-dismiss="modal">
                   <i class="fas fa-times fa-fw"></i>
-                  Close Window
+                  Cerrar
                 </button>
               </div>
             </div>
@@ -543,7 +678,7 @@
     </div>
   </div>
 
-    <!-- Portfolio Modal 4 -->
+  <!-- Portfolio Modal 4 -->
   <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-labelledby="portfolioModal4Label" aria-hidden="true">
     <div class="modal-dialog modal-xl" role="document">
       <div class="modal-content">
@@ -567,16 +702,105 @@
                   <div class="divider-custom-line"></div>
                 </div>
                 <!-- Portfolio Modal - Image -->
-                <img class="img-fluid rounded mb-5" src="img/portfolio/cyt_full.webp" alt="">
+                <img class="img-fluid rounded mb-5 d-none d-sm-block" src="img/portfolio/cyt_full.webp" alt="Cielo y Tierra">
+                <img class="img-fluid rounded mb-5 d-block d-sm-none" src="img/portfolio/cyt_full_movil.webp" alt="Cielo y Tierra">
                 <!-- Portfolio Modal - Text -->
                 <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                <a class="btn btn-info" href="https://www.cytescuelamtc.com" target="new">
+                <a class="btn btn-primary" href="https://www.cytescuelamtc.com" target="new">
                   <i class="fas fa-external-link-alt fa-fw"></i>
                    Ver más
                 </a>
-                <button class="btn btn-primary" href="#" data-dismiss="modal">
+                <button class="btn btn-danger" href="#" data-dismiss="modal">
                   <i class="fas fa-times fa-fw"></i>
-                  Close Window
+                  Cerrar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Portfolio Modal 5 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-labelledby="portfolioModal5Label" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+        <div class="modal-body text-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <!-- Portfolio Modal - Title -->
+                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Irene Garibaldi</h2>
+                <!-- Icon Divider -->
+                <div class="divider-custom">
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-icon">
+                    <!-- <i class="fas fa-gamepad"></i> -->
+                  </div>
+                  <div class="divider-custom-line"></div>
+                </div>
+                <!-- Portfolio Modal - Image -->
+                <img class="img-fluid rounded mb-5 d-none d-sm-block" src="img/portfolio/IreneGaribaldi_full.webp" alt="Irene Garibaldi">
+                <img class="img-fluid rounded mb-5 d-block d-sm-none" src="img/portfolio/IreneGaribaldi_full_movil.webp" alt="Irene Garibaldi">
+                <!-- Portfolio Modal - Text -->
+                <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                <a class="btn btn-primary" href="https://irenegaribaldi.com" target="new">
+                  <i class="fas fa-external-link-alt fa-fw"></i>
+                   Ver más
+                </a>
+                <button class="btn btn-danger" href="#" data-dismiss="modal">
+                  <i class="fas fa-times fa-fw"></i>
+                  Cerrar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Portfolio Modal 6 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-labelledby="portfolioModal6Label" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+        <div class="modal-body text-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <!-- Portfolio Modal - Title -->
+                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Excellence Editorial</h2>
+                <!-- Icon Divider -->
+                <div class="divider-custom">
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-icon">
+                    <!-- <i class="fas fa-gamepad"></i> -->
+                  </div>
+                  <div class="divider-custom-line"></div>
+                </div>
+                <!-- Portfolio Modal - Image -->
+                <img class="img-fluid rounded mb-5 d-none d-sm-block" src="img/portfolio/ExcellenceEditorial_full.webp" alt="Excellnce Editorial">
+                <img class="img-fluid rounded mb-5 d-block d-sm-none" src="img/portfolio/ExcellenceEditorial_full_movil.webp" alt="Excellence Editorial">
+                <!-- Portfolio Modal - Text -->
+                <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                <a class="btn btn-primary" href="https://www.excellenceditorial.com" target="new">
+                  <i class="fas fa-external-link-alt fa-fw"></i>
+                   Ver más
+                </a>
+                <button class="btn btn-danger" href="#" data-dismiss="modal">
+                  <i class="fas fa-times fa-fw"></i>
+                  Cerrar
                 </button>
               </div>
             </div>
@@ -593,6 +817,14 @@
   <!-- Plugin JavaScript -->
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
+  <!-- Contact Form JavaScript -->
+  <script src="validateform/js/app.js"></script>
+  <script src="js/jqBootstrapValidation.js"></script>
+  <script src="js/contact_me.js"></script>
+  <!-- Jquery validation form scripts -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.0/dist/jquery.validate.min.js"></script>
+  <script src="js/login_validation.js"></script>
+  <!-- <script src="js/register_validation.js"></script> -->
   <!-- Custom scripts for this template -->
   <script src="js/resume.min.js"></script>
 
