@@ -21,13 +21,14 @@
     {
         var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
         var numero_errores = 0;
+        
         if (username.value == "") 
         {
             username.style.border = "1px solid red";
             name_error.textContent = "El Username es necesario";
             username.focus();
             numero_errores++;
-            console.log("Falta Username: "+numero_errores);
+            // console.log("Falta Username: "+numero_errores);
         }
 
         // email validation
@@ -37,7 +38,7 @@
             email_error.textContent = "El Email es necesario";
             email.focus();
             numero_errores++;
-            console.log("Falta email: "+numero_errores);
+            // console.log("Falta email: "+numero_errores);
 
         }else if(!mailformat.test(email.value)){
             email_error.textContent = "El email no cumple el formato correcto";
@@ -50,7 +51,7 @@
             password_error.textContent = "El Password es necesario";
             password.focus();
             numero_errores++;
-            console.log("Falta Password: "+numero_errores);
+            // console.log("Falta Password: "+numero_errores);
         }
 
         // check if the two password match
